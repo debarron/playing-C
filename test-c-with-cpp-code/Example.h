@@ -1,15 +1,6 @@
-#ifndef EXAMPLE_H
-#define EXAMPLE_H
+#ifndef __EXAMPLE_H__
+#define __EXAMPLE_H__
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-int function_1(char *);
-
-#ifdef __cplusplus
-}
-#endif
+int function_1(char *soon_to_be_string);
 
 #endif
-

@@ -1,10 +1,14 @@
+all: test-example clean
+.PHONY: all
+
 Example.o:
-	gcc -lstdc++ -std=c++11 -o Example.o -c Example.cpp 
+	g++ -c Example.cpp -I./
 
-test_example.o: 
-	gcc -o test_example.o -c test_example.c
+Example_Wrapper.o:
+	g++ -c Example_Wrapper.cpp -I./
 
-test-example: Example.o test_example.o
-	g++ -o test-example Example.o test_example.o -I./
+test-example: Example.o Example_Wrapper.o
+	gcc -o test-example main.c Example_Wrapper.o Example.o -I./ -lstdc++
 
-
+clean:
+	rm *.o

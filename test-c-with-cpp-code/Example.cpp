@@ -1,8 +1,7 @@
 #include <iostream>
-#include <string>
+#include "Example.h"
 
-int function_1(char *soon_to_be_string){
-  std::cout << "This is a message with " << soon_to_be_string << "/n";
+int function_1(char *sts){
+  std::cout << "C++ says: " << sts << "\n";
   return 1;
 }
-
